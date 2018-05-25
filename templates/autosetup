@@ -1,0 +1,12 @@
+SWRAID 1
+SWRAIDLEVEL 1
+
+BOOTLOADER grub
+HOSTNAME infra-0{{index}}.wordstobytes.com
+
+PART swap swap 8G
+PART / ext4 16G
+PART /domus ext4 128G
+PART /storage ext4  all
+
+IMAGE /root/.oldroot/nfs/install/../images/Ubuntu-1804-bionic-64-minimal.tar.gz
